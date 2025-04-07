@@ -1,9 +1,11 @@
 import React from "react";
-import { FaRegHeart } from "react-icons/fa";
+import { FaHeart, FaHome, FaRegHeart } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import CartSideBox from "./CartSideBox";
 import { useSelector } from "react-redux";
 import WishSideBox from "./WishSideBox";
+import { GiShop } from "react-icons/gi";
+import { FaCartShopping } from "react-icons/fa6";
 
 const Navbar = () => {
   const wishItems = useSelector((state) => state.wish.wishItems);
@@ -12,18 +14,22 @@ const Navbar = () => {
     {
       path: "/",
       element: "Home",
+      icon: <FaHome />,
     },
     {
       path: "/shop",
       element: "Shop",
+      icon: <GiShop />,
     },
     {
       path: "/cart",
       element: "Cart",
+      icon: <FaCartShopping />,
     },
     {
       path: "/wishlist",
       element: "Wishlist",
+      icon: <FaHeart />,
     },
   ];
 
@@ -48,11 +54,13 @@ const Navbar = () => {
         <CartSideBox />
       </div>
       {/* NavList Icons */}
-      <ul className="flex fixed bottom-0 sm:hidden gap-3 justify-center items-center w-full p-5 bg-white">
+      <ul className="flex fixed bottom-0 right-0 sm:hidden gap-3 justify-between items-center w-full p-5 z-50 bg-white shadow-[inset_0px_20px_20px_10px_#00000024]">
         {navList.map((item, index) => {
           return (
-            <li key={index}>
-              <NavLink to={item.path}>{item.element}</NavLink>
+            <li key={index} className=" text-3xl bg-lime-400 p-3 rounded-full">
+              <NavLink to={item.path} className="hover:">
+                {item.icon}
+              </NavLink>
             </li>
           );
         })}

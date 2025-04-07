@@ -24,7 +24,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-[90%] mx-auto grid grid-rows-4 sm:grid-rows-1 grid-cols-1 md:grid-cols-4 justify-center items-center gap-5">
+    <div className="w-[90%] mx-auto grid grid-rows-4 sm:grid-rows-1 grid-cols-1 md:grid-cols-4 justify-center items-center gap-5 pb-16 sm:pb-0">
       <div className="flex-1 flex flex-col gap-3">
         <p className="font-bold text-xl">WOOD TEXTURE</p>
         <p className="text-sm text-gray-500 italic tracking-wider">

@@ -35,7 +35,7 @@ const CartSideBox = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } w-[60vh] h-[100vh] bg-white fixed top-0 right-0 z-10 cursor-pointer`}
+        } w-full sm:w-[60vh] h-[100vh] bg-white fixed top-0 right-0 z-10 cursor-pointer`}
       >
         <div className="flex justify-between items-center p-3 text-xl border-b">
           <p>My Cart</p>
