@@ -22,7 +22,7 @@ const Categories = () => {
         {data?.map((subData) => {
           return (
             <li className="bg-lime-200 w-32 h-32 flex justify-center items-center flex-col gap-2 rounded-full hover:bg-lime-400 transition-all duration-300 ease-linear cursor-pointer">
-              <img src={subData.image} />
+              <img src={subData.image} loading="lazy" />
               <p>{subData.name}</p>
             </li>
           );

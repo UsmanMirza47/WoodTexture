@@ -19,7 +19,11 @@ const Banner = () => {
             Get Cozy with Discounted Sofas!
           </p>
         </div>
-        <img src="./Hero_banner/04.jpg" className="w-full h-full" />
+        <img
+          src="./Hero_banner/04.jpg"
+          className="w-full h-full"
+          loading="lazy"
+        />
       </div>
     </div>
   );
