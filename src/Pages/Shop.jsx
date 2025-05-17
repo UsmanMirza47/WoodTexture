@@ -1,19 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../Components/Shop/ProductCard";
+import products from "../assets/API/products.json";
 
 const Shop = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([...products]);
   const [option, setOption] = useState();
-
-  useEffect(() => {
-    fetch("./Products/products.json")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setData(data.products);
-      });
-  }, []);
 
   const handleSortData = (e) => {
     const value = e.target.value;

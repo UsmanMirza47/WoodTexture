@@ -1,4 +1,3 @@
-import React from "react";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart, removeFromCart } from "../features/Cart/CartSlice";
@@ -7,7 +6,7 @@ import CartRow from "../Components/Cart/CartRow";
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   return (
     <div className="w-full flex flex-col justify-center items-center">

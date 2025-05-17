@@ -34,7 +34,7 @@ const ProductListCard = ({ data }) => {
   return (
     <li className="flex flex-col gap-3">
       <div className="relative group overflow-hidden cursor-pointer ">
-        <img src={images[0]} />
+        <img srcSet={images[0]} loading="lazy" />
 
         <div className="absolute -bottom-12 w-full flex justify-center items-center group-hover:bottom-5 transition-all duration-700 ease-in-out">
           <button

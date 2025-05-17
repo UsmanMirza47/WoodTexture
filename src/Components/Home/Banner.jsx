@@ -10,7 +10,11 @@ const Banner = () => {
             Save Big on Stylish Chairs!
           </p>
         </div>
-        <img src="./Hero_banner/01.jpg" className="w-full h-full" />
+        <img
+          src="./Hero_banner/01.jpg"
+          className="w-full h-full"
+          loading="lazy"
+        />
       </div>
       <div className="flex-1 relative w-full">
         <div className="absolute top-2 p-3">
