@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "../../index.css";
 import { Pagination, Navigation } from "swiper/modules";
-import Spinner from "../../features/Icons/Spinner";
 
 export default function App() {
   const [data, setData] = useState();
